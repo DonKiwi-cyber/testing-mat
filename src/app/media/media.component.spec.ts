@@ -3,7 +3,7 @@ import { MediaComponent } from './media.component';
 import { HttpClientModule } from '@angular/common/http';
 import { A1DevHoursService } from '../services/a1-dev-hours.service';
 import { A1ProxySizeService } from '../services/a1-proxy-size.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing'
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { of } from 'rxjs';
 
 describe('MediaComponent', () => {
