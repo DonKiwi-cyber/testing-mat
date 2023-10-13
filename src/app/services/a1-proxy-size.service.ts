@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class A1ProxySizeService {
 
-  apiURL = 'http://localhost:8080/a1_proxy_size'
+  apiURL = 'https://api-cv-service-donkiwi-cyber.cloud.okteto.net/a1_proxy_size'
 
   constructor(private http: HttpClient) 
   { }

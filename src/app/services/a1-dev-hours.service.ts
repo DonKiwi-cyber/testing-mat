@@ -8,7 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class A1DevHoursService {
 
-  apiURL = 'http://localhost:8080/a1_dev_hours';
+  apiURL = 'https://api-cv-service-donkiwi-cyber.cloud.okteto.net/a1_dev_hours';
 
   constructor(private http: HttpClient) 
   { }
