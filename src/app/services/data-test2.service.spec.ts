@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
+import { DataTest2Service } from './data-test2.service';
 import { HttpClientModule } from '@angular/common/http';
-import { A1DevHoursService } from './a1-dev-hours.service';
 
-describe('A1DevHoursService', () => {
-  let service: A1DevHoursService;
+describe('DataTest2Service', () => {
+  let service: DataTest2Service;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule]
     });
-    service = TestBed.inject(A1DevHoursService);
+    service = TestBed.inject(DataTest2Service);
   });
 
   it('should be created', () => {
