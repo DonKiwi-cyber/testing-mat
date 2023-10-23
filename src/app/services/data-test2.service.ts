@@ -26,6 +26,7 @@ export class DataTest2Service {
 	catchError(this.handleError)
     )
   }
+  
 
   handleError(error: any) {
     let errorMessage = '';
