@@ -20,8 +20,6 @@ export class LinearRegressionComponent {
   )
   {}
 
-  arreglo: any = [];
-
   proxy_size(): number[]{
     let x: number[] = [
       130,
@@ -86,29 +84,33 @@ export class LinearRegressionComponent {
     return y
   }
 
-  getX(x: number):any[]{
+  getX(x: number): number[]{
     let arregloX: any = [];
     switch(x){
       case 1:
-        this.test1.getHeader().subscribe((data: any) => {
+        this.test1.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloX = data.proxy_size;
         });
         break;
       case 2:
-        this.test2.getHeader().subscribe((data: any) => {
+        this.test2.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloX = data.proxy_size;
         });
         break;
       case 3:
-        this.test3.getHeader().subscribe((data: any) => {
+        this.test3.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloX = data.plan_added;
         });
         break;
       case 4:
-        this.test4.getHeader().subscribe((data: any) => {
+        this.test4.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloX = data.plan_added;
         });
@@ -121,29 +123,34 @@ export class LinearRegressionComponent {
     return arregloX;
   }
 
-  getY(y: number):any[]{
+
+  getY(y: number): number[]{
     let arregloY: any = [];
     switch(y){
       case 1:
-        this.test1.getHeader().subscribe((data: any) => {
+        this.test1.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloY = data.actual_added;
         });
         break;
       case 2:
-        this.test2.getHeader().subscribe((data: any) => {
+        this.test2.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloY = data.actual_develop;
         });
         break;
       case 3:
-        this.test3.getHeader().subscribe((data: any) => {
+        this.test3.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloY = data.actual_added;
         });
         break;
       case 4:
-        this.test4.getHeader().subscribe((data: any) => {
+        this.test4.getHeader()
+        .subscribe((data: any) => {
           console.log(data);
           arregloY = data.actual_develop;
         });

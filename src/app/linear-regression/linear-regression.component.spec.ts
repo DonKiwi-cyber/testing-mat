@@ -183,7 +183,7 @@ describe('LinearRegressionComponent', () => {
     expect(B1).toBe(0.1681);
   })
 
-  it('Should return B0 = -4.039 with the dataset Data_Test2', () => {
+  it('Should return B0 = -4.039 with the dataset Data_Test2'), () => {
     const awaiting = {
       "proxy_size": [
           130,
@@ -259,7 +259,32 @@ describe('LinearRegressionComponent', () => {
 
   //Data3
   it('Should return B1 = 1.43097 with the dataset Data_Test3', () => {
-    
+    "plan_added":[
+          163,
+          765,
+          141,
+          166,
+          137,
+          355,
+          136,
+          1206,
+          433,
+          1130
+      ],
+      "actual_added":[
+          186,
+          699,
+          132,
+          272,
+          291,
+          331,
+          199,
+          1890,
+          788,
+          1601
+      ]
+  }
+    spyOn(serviceTest3, 'getHeader').and.returnValues(of(awaiting));
     const dataX: number[] = component.getX(3);
     const dataY: number[] = component.getY(3);
     const B1: number = component.B1(dataX, dataY);
