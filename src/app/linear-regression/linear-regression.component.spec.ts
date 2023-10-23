@@ -183,7 +183,7 @@ describe('LinearRegressionComponent', () => {
     expect(B1).toBe(0.1681);
   })
 
-  it('Should return B0 = -4.039 with the dataset Data_Test2'), () => {
+  it('Should return B0 = -4.039 with the dataset Data_Test2', () => {
     const awaiting = {
       "proxy_size": [
           130,
@@ -259,6 +259,7 @@ describe('LinearRegressionComponent', () => {
 
   //Data3
   it('Should return B1 = 1.43097 with the dataset Data_Test3', () => {
+    const awaiting = {
     "plan_added":[
           163,
           765,
