@@ -22,7 +22,6 @@ describe('LinearRegressionComponent', () => {
       declarations: [LinearRegressionComponent],
       imports: [HttpClientModule, HttpClientTestingModule],
       providers: [DataTest1Service, DataTest2Service, DataTest3Service, DataTest4Service],
-      teardown: { destroyAfterEach: false }
     });
     fixture = TestBed.createComponent(LinearRegressionComponent);
     component = fixture.componentInstance;
