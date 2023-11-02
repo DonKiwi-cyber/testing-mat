@@ -6,9 +6,9 @@ import { retry, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class A1DevHoursService {
+export class DataTest2Service {
 
-  apiURL = 'https://api-cv-service-donkiwi-cyber.cloud.okteto.net/a1_dev_hours';
+  apiURL = 'https://api-cv-service-donkiwi-cyber.cloud.okteto.net/a3_test2';
 
   constructor(private http: HttpClient) 
   { }
