@@ -5,15 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { StddevComponent } from './stddev/stddev.component';
 import { MediaComponent } from './media/media.component';
-import { SimpsonComponent } from './simpson/simpson.component';
-
+import { LinearRegressionComponent } from './linear-regression/linear-regression.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StddevComponent,
     MediaComponent,
-    SimpsonComponent
+    LinearRegressionComponent
   ],
   imports: [
     BrowserModule,
