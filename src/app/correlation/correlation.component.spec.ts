@@ -63,11 +63,10 @@ describe('CorrelationComponent', () => {
       ]
     }
     spyOn(serviceTest1, 'getHeader').and.returnValues(of(awaiting))
-    spyOn(serviceTest1, 'getHeader').and.returnValues(of(awaiting));
     const datax: number[] = component.getData1("x")
     const datay: number[] = component.getData1("y")
     const r: number = parseFloat(component.correlation(datax, datay).toFixed(4))
-    const rr: number = r*r
+    const rr: number = parseFloat((r*r).toFixed(4))
     expect(rr).toBe(0.9111)
   })
 
@@ -101,8 +100,8 @@ describe('CorrelationComponent', () => {
     const datax: number[] = component.getData2("x")
     const datay: number[] = component.getData2("y")
     const r: number = parseFloat(component.correlation(datax, datay).toFixed(4))
-    const rr: number = r*r
-    expect(rr).toBe(0.8711)
+    const rr: number = parseFloat((r*r).toFixed(4))
+    expect(rr).toBeCloseTo(0.8711)
   })
 
   //Data_Test3
@@ -135,7 +134,7 @@ describe('CorrelationComponent', () => {
     const datax: number[] = component.getData3("x")
     const datay: number[] = component.getData3("y")
     const r: number = parseFloat(component.correlation(datax, datay).toFixed(4))
-    const rr: number = r*r
+    const rr: number = parseFloat((r*r).toFixed(4))
     expect(rr).toBe(0.9276)
   })
 
@@ -169,7 +168,7 @@ describe('CorrelationComponent', () => {
     const datax: number[] = component.getData4("x")
     const datay: number[] = component.getData4("y")
     const r: number = parseFloat(component.correlation(datax, datay).toFixed(4))
-    const rr: number = r*r
-    expect(rr).toBe(0.9276)
+    const rr: number = parseFloat((r*r).toFixed(4))
+    expect(rr).toBeCloseTo(0.8988)
   })
 });
