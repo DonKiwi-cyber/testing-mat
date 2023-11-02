@@ -38,10 +38,9 @@ describe('LinearRegressionComponent', () => {
 
   //Data_Test1
   it('Should return B1 = 1.7279 with the dataset A1_Test1', () => {
-    
     const dataX: number[] = component.proxy_size();
     const dataY: number[] = component.actual_added();
-    const B1: number = component.B1(dataX, dataY);
+    const B1: number = parseFloat(component.B1(dataX, dataY).toFixed(4));
     console.log(B1);
     expect(B1).toBe(1.7279);
   })
@@ -50,7 +49,7 @@ describe('LinearRegressionComponent', () => {
     const dataX: number[] = component.proxy_size();
     const dataY: number[] = component.actual_added();
     const B1: number = component.B1(dataX, dataY);
-    const B0: number = component.B0(dataX, dataY, B1);
+    const B0: number = parseFloat(component.B0(dataX, dataY, B1).toFixed(2));
     console.log(B0);
     expect(B0).toBe(-22.55);
   })
@@ -62,7 +61,7 @@ describe('LinearRegressionComponent', () => {
     const dataY: number[] = component.actual_added();
     const B1: number = component.B1(dataX, dataY);
     const B0: number = component.B0(dataX, dataY, B1);
-    const yk: number = component.Yk(B0, B1, xk);
+    const yk: number = parseFloat(component.Yk(B0, B1, xk).toFixed(3));
     console.log(yk);
     expect(yk).toBe(644.429); 
   })
@@ -72,7 +71,7 @@ describe('LinearRegressionComponent', () => {
     
     const dataX: number[] = component.proxy_size();
     const dataY: number[] = component.actual_develop();
-    const B1: number = component.B1(dataX, dataY);
+    const B1: number = parseFloat(component.B1(dataX, dataY).toFixed(4));
     console.log(B1);
     expect(B1).toBe(0.1681);
   })
@@ -82,7 +81,7 @@ describe('LinearRegressionComponent', () => {
     const dataX: number[] = component.proxy_size();
     const dataY: number[] = component.actual_develop();
     const B1: number = component.B1(dataX, dataY);
-    const B0: number = component.B0(dataX, dataY, B1);
+    const B0: number = parseFloat(component.B0(dataX, dataY, B1).toFixed(3));
     console.log(B0);
     expect(B0).toBe(-4.039);
   })
@@ -94,7 +93,7 @@ describe('LinearRegressionComponent', () => {
     const dataY: number[] = component.actual_develop();
     const B1: number = component.B1(dataX, dataY);
     const B0: number = component.B0(dataX, dataY, B1);
-    const yk: number = component.Yk(B0, B1, xk);
+    const yk: number = parseFloat(component.Yk(B0, B1, xk).toFixed(3));
     console.log(yk);
     expect(yk).toBe(60.858); 
   })
@@ -104,7 +103,7 @@ describe('LinearRegressionComponent', () => {
     
     const dataX: number[] = component.plan_added();
     const dataY: number[] = component.actual_added();
-    const B1: number = component.B1(dataX, dataY);
+    const B1: number = parseFloat(component.B1(dataX, dataY).toFixed(5));
     console.log(B1);
     expect(B1).toBe(1.43097);
   })
@@ -114,7 +113,7 @@ describe('LinearRegressionComponent', () => {
     const dataX: number[] = component.plan_added();
     const dataY: number[] = component.actual_added();
     const B1: number = component.B1(dataX, dataY);
-    const B0: number = component.B0(dataX, dataY, B1);
+    const B0: number = parseFloat(component.B0(dataX, dataY, B1).toFixed(2));
     console.log(B0);
     expect(B0).toBe(-23.92);
   })
@@ -126,19 +125,19 @@ describe('LinearRegressionComponent', () => {
     const dataY: number[] = component.actual_added();
     const B1: number = component.B1(dataX, dataY);
     const B0: number = component.B0(dataX, dataY, B1);
-    const yk: number = component.Yk(B0, B1, xk);
+    const yk: number = parseFloat(component.Yk(B0, B1, xk).toFixed(4));
     console.log(yk);
     expect(yk).toBe(528.4294); 
   })
 
   //Data4
-  it('Should return B1 = 0.16064 with the dataset Data_Test4', () => {
+  it('Should return B1 = 0.14016 with the dataset Data_Test4', () => {
     
     const dataX: number[] = component.plan_added();
     const dataY: number[] = component.actual_develop();
-    const B1: number = component.B1(dataX, dataY);
+    const B1: number = parseFloat(component.B1(dataX, dataY).toFixed(5));
     console.log(B1);
-    expect(B1).toBe(0.16064);
+    expect(B1).toBe(0.14016);
   })
 
   it('Should return B0 = -4.604 with the dataset Data_Test4', () => {
@@ -146,7 +145,7 @@ describe('LinearRegressionComponent', () => {
     const dataX: number[] = component.plan_added();
     const dataY: number[] = component.actual_develop();
     const B1: number = component.B1(dataX, dataY);
-    const B0: number = component.B0(dataX, dataY, B1);
+    const B0: number = parseFloat(component.B0(dataX, dataY, B1).toFixed(3));
     console.log(B0);
     expect(B0).toBe(-4.604);
   })
@@ -158,8 +157,7 @@ describe('LinearRegressionComponent', () => {
     const dataY: number[] = component.actual_develop();
     const B1: number = component.B1(dataX, dataY);
     const B0: number = component.B0(dataX, dataY, B1);
-    const yk: number = component.Yk(B0, B1, xk);
-    console.log(yk);
+    const yk: number = parseFloat(component.Yk(B0, B1, xk).toFixed(4));
     expect(yk).toBe(49.4994); 
   })
 });

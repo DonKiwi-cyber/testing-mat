@@ -31,7 +31,7 @@ export class LinearRegressionComponent {
       95,
       945,
       368,
-      691
+      961
     ]
     return x;
   }
@@ -70,7 +70,7 @@ export class LinearRegressionComponent {
 
   actual_develop(): number[]{
     let y: number[] = [
-      15,
+      15.0,
       69.9,
       6.5,
       22.4,
@@ -84,84 +84,84 @@ export class LinearRegressionComponent {
     return y
   }
 
-  getX(x: number): number[]{
-    let arregloX: any = [];
-    switch(x){
-      case 1:
-        this.test1.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloX = data.proxy_size;
-        });
-        break;
-      case 2:
-        this.test2.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloX = data.proxy_size;
-        });
-        break;
-      case 3:
-        this.test3.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloX = data.plan_added;
-        });
-        break;
-      case 4:
-        this.test4.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloX = data.plan_added;
-        });
-        break;
-      default:
-        console.log('Not a valid value');
-        arregloX = [];
-        break;
-    }
-    return arregloX;
-  }
+  // getX(x: number): number[]{
+  //   let arregloX: any = [];
+  //   switch(x){
+  //     case 1:
+  //       this.test1.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloX = data.proxy_size;
+  //       });
+  //       break;
+  //     case 2:
+  //       this.test2.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloX = data.proxy_size;
+  //       });
+  //       break;
+  //     case 3:
+  //       this.test3.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloX = data.plan_added;
+  //       });
+  //       break;
+  //     case 4:
+  //       this.test4.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloX = data.plan_added;
+  //       });
+  //       break;
+  //     default:
+  //       console.log('Not a valid value');
+  //       arregloX = [];
+  //       break;
+  //   }
+  //   return arregloX;
+  // }
 
 
-  getY(y: number): number[]{
-    let arregloY: any = [];
-    switch(y){
-      case 1:
-        this.test1.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloY = data.actual_added;
-        });
-        break;
-      case 2:
-        this.test2.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloY = data.actual_develop;
-        });
-        break;
-      case 3:
-        this.test3.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloY = data.actual_added;
-        });
-        break;
-      case 4:
-        this.test4.getHeader()
-        .subscribe((data: any) => {
-          console.log(data);
-          arregloY = data.actual_develop;
-        });
-        break;
-      default:
-        console.log('Not a valid value');
-        arregloY = [];
-        break;
-    }
-    return arregloY;
-  }
+  // getY(y: number): number[]{
+  //   let arregloY: any = [];
+  //   switch(y){
+  //     case 1:
+  //       this.test1.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloY = data.actual_added;
+  //       });
+  //       break;
+  //     case 2:
+  //       this.test2.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloY = data.actual_develop;
+  //       });
+  //       break;
+  //     case 3:
+  //       this.test3.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloY = data.actual_added;
+  //       });
+  //       break;
+  //     case 4:
+  //       this.test4.getHeader()
+  //       .subscribe((data: any) => {
+  //         console.log(data);
+  //         arregloY = data.actual_develop;
+  //       });
+  //       break;
+  //     default:
+  //       console.log('Not a valid value');
+  //       arregloY = [];
+  //       break;
+  //   }
+  //   return arregloY;
+  // }
 
   B1(x: number[], y: number[]): number{
     const sigmaX: number = sum(x);
