@@ -9,7 +9,7 @@ export function sum(x: number[]): number{
 export function sumXY(x: number[], y: number[]): number{
     const n: number = x.length
     let sum: number = 0;
-    for (let i=0; i<n;){
+    for (let i=0; i<n; i++){
         sum = sum + (x[i] * y[i])
     }
     return sum
