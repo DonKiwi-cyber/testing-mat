@@ -13,8 +13,13 @@ import { SimpsonComponent } from './simpson/simpson.component';
     AppComponent,
     StddevComponent,
     MediaComponent,
+<<<<<<< HEAD
     LinearRegressionComponent,
     SimpsonComponent
+=======
+    SimpsonComponent,
+    //LinearRegressionComponent
+>>>>>>> 811000021645ebc88e5a2ab3d83c53d78b240103
   ],
   imports: [
     BrowserModule,
