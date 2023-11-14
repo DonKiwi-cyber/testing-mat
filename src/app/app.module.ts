@@ -7,19 +7,16 @@ import { StddevComponent } from './stddev/stddev.component';
 import { MediaComponent } from './media/media.component';
 import { LinearRegressionComponent } from './linear-regression/linear-regression.component';
 import { SimpsonComponent } from './simpson/simpson.component';
+import { CorrelationComponent } from './correlation/correlation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StddevComponent,
     MediaComponent,
-<<<<<<< HEAD
     LinearRegressionComponent,
-    SimpsonComponent
-=======
     SimpsonComponent,
-    //LinearRegressionComponent
->>>>>>> 811000021645ebc88e5a2ab3d83c53d78b240103
+    CorrelationComponent,
   ],
   imports: [
     BrowserModule,
